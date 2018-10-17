@@ -1,7 +1,7 @@
 <div class="mdl-cell mdl-cell--12-col">
     <div class="mdl-cell mdl-cell--6-col">
         <h1>Students</h1>
-        <table id="rsvp-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <table id="students-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
           <thead>
             <tr>
               <th class="mdl-data-table__cell--non-numeric">Name</th>
@@ -11,7 +11,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr data-name="Acrylic (Transparent)">
+            <tr data-name="Student_Name">
               <td class="mdl-data-table__cell--non-numeric">Name</td>
               <td class="mdl-data-table__cell--non-numeric">she/her</td>
               <td class="mdl-data-table__cell--non-numeric">Javascript</td>
@@ -23,7 +23,7 @@
 
     <div class="mdl-cell mdl-cell--6-col">
         <h1>Coaches</h1>
-        <table id="rsvp-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <table id="coaches-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
           <thead>
             <tr>
               <th class="mdl-data-table__cell--non-numeric">Name</th>
@@ -33,7 +33,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr data-name="Acrylic (Transparent)">
+            <tr data-name="Coach_Name">
               <td class="mdl-data-table__cell--non-numeric">Name</td>
               <td class="mdl-data-table__cell--non-numeric">she/her</td>
               <td class="mdl-data-table__cell--non-numeric">Javascript</td>
@@ -43,6 +43,9 @@
         </table>
     </div>
 </div>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="generateList()">
-    RSVP
-</button>
+
+<div class="mdl-cell mdl-cell--12-col button">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="generateList()">
+        Confirm attendance
+    </button>
+</div>

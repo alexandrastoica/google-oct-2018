@@ -1,2 +1,13 @@
-.mdl-cell .mdl-cell--12-col {
+.mdl-cell--12-col {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    margin-top: 50px;
 }

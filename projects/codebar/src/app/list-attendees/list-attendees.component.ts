@@ -6,22 +6,30 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
   styleUrls: ['./list-attendees.component.css']
 })
 export class ListAttendeesComponent implements OnInit {
-  attendees = []
+  students = [];
+  coaches = [];
 
   constructor() { }
 
   ngOnInit() {
-    this.attendees = []
+    this.students = [];
+    this.coaches = [];
   }
 
   generateList() {
-    this.attendees = []
-    let checkboxes = document.getElementById('rsvp-table').querySelectorAll('.is-checked');
-    for (let i = 0; i < checkboxes.length; i++) {
-      const name = checkboxes[i].parentElement.parentElement.dataset.name;
-      if (name != undefined) {
-        this.attendees.push(name);
+      this.students = this.makeList('students-table');
+      this.coaches = this.makeList('coaches-table');
+  }
+
+  makeList(id: string) {
+      let attendees = []
+      let checkboxes = document.getElementById(id).querySelectorAll('.is-checked');
+      for (let i = 0; i < checkboxes.length; i++) {
+        const name = checkboxes[i].parentElement.parentElement.dataset.name;
+        if (name != undefined) {
+          attendees.push(name);
+        }
       }
-    }
+      return attendees;
   }
 }
