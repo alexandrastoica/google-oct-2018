@@ -4,6 +4,14 @@
     flex-flow: wrap;
 }
 
+#coaches-table {
+    width: 100%;
+}
+
+.selected {
+    color: red;
+}
+
 .button {
     display: flex;
     flex-direction: row;

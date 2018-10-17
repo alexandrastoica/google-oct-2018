@@ -1,21 +1,19 @@
 <div class="mdl-cell mdl-cell--12-col">
     <div class="mdl-cell mdl-cell--6-col">
         <h1>Students</h1>
-        <table id="students-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <table id="students-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
               <th class="mdl-data-table__cell--non-numeric">Name</th>
-              <th class="mdl-data-table__cell--non-numeric">Pron</th>
               <th class="mdl-data-table__cell--non-numeric">Language</th>
               <th class="mdl-data-table__cell--non-numeric">Skill Level</th>
             </tr>
           </thead>
           <tbody>
-            <tr data-name="Student_Name">
-              <td class="mdl-data-table__cell--non-numeric">Name</td>
-              <td class="mdl-data-table__cell--non-numeric">she/her</td>
-              <td class="mdl-data-table__cell--non-numeric">Javascript</td>
-              <td class="mdl-data-table__cell--non-numeric">2</td>
+            <tr *ngFor="let person of data">
+              <td class="mdl-data-table__cell--non-numeric">{{person[0]}}</td>
+              <td class="mdl-data-table__cell--non-numeric">{{person[1]}}</td>
+              <td>{{person[2]}}</td>
             </tr>
           </tbody>
         </table>
@@ -23,21 +21,15 @@
 
     <div class="mdl-cell mdl-cell--6-col">
         <h1>Coaches</h1>
-        <table id="coaches-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <table id="coaches-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
               <th class="mdl-data-table__cell--non-numeric">Name</th>
-              <th class="mdl-data-table__cell--non-numeric">Pron</th>
-              <th class="mdl-data-table__cell--non-numeric">Language</th>
-              <th class="mdl-data-table__cell--non-numeric">Skill Level</th>
             </tr>
           </thead>
           <tbody>
-            <tr data-name="Coach_Name">
-              <td class="mdl-data-table__cell--non-numeric">Name</td>
-              <td class="mdl-data-table__cell--non-numeric">she/her</td>
-              <td class="mdl-data-table__cell--non-numeric">Javascript</td>
-              <td class="mdl-data-table__cell--non-numeric">2</td>
+            <tr *ngFor="let person of data">
+              <td class="mdl-data-table__cell--non-numeric">{{person[0]}}</td>
             </tr>
           </tbody>
         </table>

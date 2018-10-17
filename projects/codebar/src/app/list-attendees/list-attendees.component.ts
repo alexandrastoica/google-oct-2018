@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { GoogleSheetsService } from '../google-sheets.service';
 
 @Component({
   selector: 'app-list-attendees',
@@ -8,12 +9,19 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
 export class ListAttendeesComponent implements OnInit {
   students = [];
   coaches = [];
+  data;
 
-  constructor() { }
+  constructor(public gs: GoogleSheetsService) { }
 
   ngOnInit() {
     this.students = [];
     this.coaches = [];
+
+    this.gs.getData().subscribe(data => {
+      this.data = data
+      console.log(this.data)
+    });
+
   }
 
   generateList() {
@@ -31,5 +39,10 @@ export class ListAttendeesComponent implements OnInit {
         }
       }
       return attendees;
+  }
+
+  select(el) {
+      console.log(el)
+      el.className += ' selected';
   }
 }
